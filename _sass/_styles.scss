@@ -1,0 +1,426 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanssinhala.css);
+@import url('https://fonts.googleapis.com/css?family=Abhaya+Libre');
+
+
+body {
+    font: 20px/1.5 'Abhaya Libre',  sans-serif;
+    margin: 2rem 0 5rem;
+    color: #333;
+    background: rgb(255, 251, 247);
+}
+
+@media (min-width: 30rem) {
+    body {
+        margin-top: 0rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #mooniak-logo {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+a {
+    color: #ab0000;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: black;
+  text-decoration: none;
+  transform: rotate(5deg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Noto Sans Sinhala', serif;
+    font-weight: 700;
+    margin: 0 0 0.5rem -0.1rem
+    /* align left edge */
+
+    ;
+    line-height: 1;
+    color: #111;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 30rem) {
+    h2 {
+        font-weight: 400;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0.9rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+p,
+ul,
+ol,
+dl,
+table,
+pre,
+blockquote {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ul,
+ol {
+    padding-left: 1.5rem;
+}
+
+dd {
+    margin-left: 1.5rem;
+}
+
+blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: .5rem 1rem;
+    border-left: .25rem solid #ccc;
+    color: #666;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+hr {
+    border: none;
+    margin: 1.5rem 0;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    top: -1px;
+}
+
+.container img,
+.container iframe {
+    max-width: 100%;
+}
+
+.container img {
+    margin: 0 auto;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: .25rem .5rem;
+    border: 1px solid #ccc;
+}
+
+pre,
+code {
+    font-family: inherit;
+    background-color: #eee;
+}
+
+pre {
+    padding: .5rem 1rem;
+    font-size: 0.8rem;
+}
+
+code {
+    padding: .1rem .25rem;
+}
+
+pre > code {
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+}
+
+.mooniak-logo-big {
+    position: absolute;
+}
+
+.mooniak-logo-small {
+    position: absolute;
+}
+
+
+.btn {
+    border: 1px solid #555;
+    padding: 2px 4px;
+    text-transform: lowercase;
+    color: #555;
+    display: block;
+    text-align: center;
+    max-width: 440px;
+    margin: 50px auto 10px auto ;
+    font-family: 'Noto Sans Sinhala', serif;
+    transition: all 1s ease;
+}
+
+.btn-big {
+    border: 2px solid #555;
+    padding: 22px 24px;
+    text-transform: lowercase;
+    color: #555;
+}
+
+.btn:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    margin: 50px auto 10px auto ;
+    transform: rotate(-0deg) scaleX(1.15) scaleY(1.15) ;
+}
+
+.price-lable{
+    font-family: 'Noto Sans Sinhala', serif;
+    font-size: 0.7rem;
+    color: #999;
+    margin: 0px auto 34px auto ;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+.footer {
+    border-top: 2px solid #888;
+    margin-top: 70px;
+    padding: 20px;
+    text-align: center;
+}
+.footer a {
+    color: red;
+    text-decoration: none;
+}
+
+
+.initials{
+float: left;
+position: relative;
+line-height: 50%;
+margin: 0.2em 0.1em 0 0;
+font-size: 3em;
+    }
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.birds-box {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	// min-height: 100vh;
+	min-height: 70vh;
+}
+
+.bird {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
+	background-size: auto 100%;
+	width: 88px;
+	height: 125px;
+	will-change: background-position;
+	animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+
+	&--one {
+		animation-duration: 1s;
+		animation-delay: -0.5s;
+	}
+
+	&--two {
+		animation-duration: 0.9s;
+		animation-delay: -0.75s;
+	}
+
+	&--three {
+		animation-duration: 1.25s;
+		animation-delay: -0.25s;
+	}
+
+	&--four {
+		animation-duration: 1.1s;
+		animation-delay: -0.5s;
+	}
+
+}
+
+.bird-container {
+	position: absolute;
+	top: 20%;
+	left: -7.5vw;
+	transform: scale(0);
+	will-change: transform;
+
+	animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	&--one {
+		animation-duration: 15s;
+		animation-delay: 0;
+	}
+
+	&--two {
+		animation-duration: 16s;
+		animation-delay: 1s;
+	}
+
+	&--three {
+		animation-duration: 14.6s;
+		animation-delay: 9.5s;
+	}
+
+	&--four {
+		animation-duration: 16s;
+		animation-delay: 10.25s;
+	}
+
+}
+
+@keyframes fly-cycle {
+
+	100% {
+		background-position: -900px 0;
+	}
+
+}
+
+@keyframes fly-right-one {
+
+	0% {
+		left: -10%;
+		transform: scale(0.3);
+	}
+
+	10% {
+		left: 10%;
+		transform: translateY(2vh) scale(0.4);
+	}
+
+	20% {
+		left: 30%;
+		transform: translateY(0vh) scale(0.5);
+	}
+
+	30% {
+		left: 50%;
+		transform: translateY(4vh) scale(0.6);
+	}
+
+	40% {
+		left: 70%;
+		transform: translateY(2vh) scale(0.6);
+	}
+
+	50% {
+		left: 90%;
+		transform: translateY(0vh) scale(0.6);
+	}
+
+	60% {
+		left: 110%;
+		transform: translateY(0vh) scale(0.6);
+	}
+
+	100% {
+		left: 110%;
+		opacity: 1;
+		transform: translateY(0vh) scale(0.6);
+	}
+
+}
+
+@keyframes fly-right-two {
+
+	0% {
+		left: -10%;
+		opacity: 1;
+		transform: translateY(-2vh) scale(0.5);
+	}
+
+	10% {
+		left: 10%;
+		transform: translateY(0vh) scale(0.4);
+	}
+
+	20% {
+		left: 30%;
+		transform: translateY(-4vh) scale(0.6);
+	}
+
+	30% {
+		left: 50%;
+		transform: translateY(1vh) scale(0.45);
+	}
+
+	40% {
+		left: 70%;
+		transform: translateY(-2.5vh) scale(0.5);
+	}
+
+	50% {
+		left: 90%;
+		transform: translateY(0vh) scale(0.45);
+	}
+
+	51% {
+		left: 110%;
+		transform: translateY(0vh) scale(0.45);
+	}
+
+	100% {
+		left: 110%;
+		transform: translateY(0vh) scale(0.45);
+	}
+
+}
