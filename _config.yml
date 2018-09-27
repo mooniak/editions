@@ -1,5 +1,5 @@
 # Site settings
-title: බත්තලංගුණ්ඩුව
+title: mooniak editions
 description:
 baseurl:
 url:
@@ -13,9 +13,7 @@ logo:
 social:
   name:
   links:
-    - https://instagram.com/textual.works
-    - https://www.facebook.com/textualworks
-    - https://github.com/textualworks
+
 
 # Build settings
 markdown: kramdown
