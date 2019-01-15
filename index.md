@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: homepage
 ---
 
 <img style="width:20em; float:left;" src="http://mooniak.com/images/mooniak_logo.svg">
@@ -30,4 +30,4 @@ layout: default
 
 ***
 
-[අපේ ඊළඟ පොත් නිර්මාණ ගැන දැනගන්න ->  ](http://mooniak.com/subscribe)
+[අපේ ඊළඟ පොත් නිර්මාණ ගැන දැනගන්න ->](http://mooniak.com/subscribe)
